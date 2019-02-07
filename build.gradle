@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url "https://build.devotedmc.com/plugin/repository/everything/"
+    }
+}
+
+dependencies {
+    compile (
+            'com.untamedears:RealisticBiomes:1.4.1',
+            'vg.civcraft.mc.civmodcore:CivModCore:1.6.1',
+            'vg.civcraft.mc.namelayer:NameLayer:2.11.0',
+            'vg.civcraft.mc.citadel:Citadel:3.11.5',
+            'isaac:Bastion:2.2.3'
+    )
+}
+
+task copyToLib(type: Copy) {
+    into "$buildDir/resources/plugins"
+    from configurations.runtime
+}
+
+build.dependsOn(copyToLib)
