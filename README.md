@@ -60,11 +60,9 @@ Civcraft plugin projects are notorious for their many forks and poorly maintaine
 I hope that civ plugin projects will eventually move to a consistent hosted CI and use github releases as their storage mechanism. This would be a boon to many aspiring contributors.   
 
 ### Pre-generated Worlds and Storage
-Volume mounts for map data - to start each container with a fresh world-edited map. Currently lets world be created each time since worlds folders are not persisted.
+Volume mounts have been added for map data - to start each container with a fresh world-edited map. Currently lets world be created (or picked up from host system) each time the container is created.
 
-Map import, export has not been handled here as this is a testing tool primarily, but could be added pretty easily by changing the world storage folder and adding another persistent volume.
-
-TODO: Now that I think about it, persisting the DB data but not the map data is dangerous if you want to do longer term test - next step is create a volume for it.
+Map import, export has not been handled here as this is a testing tool primarily, but could be added pretty easily by specifying volume mounts on local machine or using other techniques.
 
 ### Production Server Use
 

@@ -60,4 +60,4 @@ fi
 ls -la /opt/spigot/plugins
 ls -la /opt/spigot
 
-java -Xmx1024M -Xms1024M -jar /opt/spigot/lib/spigot-1.12.2.jar --plugins=/opt/spigot/plugins/ nogui
+java -Xmx2g -jar /opt/spigot/lib/spigot-1.12.2.jar --plugins=/opt/spigot/plugins/ nogui
