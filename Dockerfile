@@ -27,6 +27,7 @@ RUN dos2unix -k /opt/spigot/create-db.sh
 RUN /opt/spigot/create-db.sh
 
 COPY build/resources/main/server-icon.png /opt/spigot
+COPY build/resources/main/bukkit.yml /opt/spigot
 
 EXPOSE 3306
 
@@ -37,6 +38,8 @@ EXPOSE 3306
 # Create the persistent volume
 VOLUME [ "/var/lib/mysql" ]
 VOLUME ["/opt/spigot/plugins"]
+VOLUME ["/opt/spigot/worlds"]
+
 EXPOSE 25565
 
 ENTRYPOINT /opt/spigot/docker-entrypoint.sh
