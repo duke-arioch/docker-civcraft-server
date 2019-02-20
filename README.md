@@ -11,12 +11,12 @@ This is not a fork of [Kawaii Spigot Server](https://github.com/kawaii/docker-sp
 
 I used [Kawaii Spigot builder](https://github.com/kawaii/docker-spigot-builder) image for setup of build tool artifacts as visible in the Dockerfile. I ran this at 1.12.2 since this is what most current civ servers run at. This means we don't have to carry the build tools around in the runtime image, saving space.
 
-## Prerequisites
+## Prerequisites (Builder Usage)
 
 * Docker installation
 * Kawaii Spigot Builder for 1.12.2. To build the builder, follow directions at [Kawaii Spigot builder](https://github.com/kawaii/docker-spigot-builder) and make sure you have the right build tools version for your needs.
 
-## Usage
+## Usage (Server)
 
 When you build the builder image, tag it as ```docker-spigot-builder:1.12.2```to make it usable by the subsequent commands. 
  
